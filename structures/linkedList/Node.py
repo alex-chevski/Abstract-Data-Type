@@ -7,14 +7,18 @@ class Node(object):
         self.data = data
         self.next = next
 
-    def get_data(self):
+    @property
+    def data_of_node(self):
         return self.data
 
-    def get_next(self):
-        return self.next
-
-    def set_data(self, data):
+    @data_of_node.setter
+    def data_of_node(self, data):
         self.data = data
 
-    def set_next(self, next):
+    @property
+    def who_next(self):
+        return self.next
+
+    @who_next.setter
+    def who_next(self, next):
         self.next = next
